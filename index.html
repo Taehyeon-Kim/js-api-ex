@@ -6,11 +6,13 @@
     <title>API 연습</title>
   </head>
   <body>
-    <h1>책 검색 사이트</h1>
+    <!-- html  -->
+    <h1>책 검색 하기</h1>
     <input id="bookName" value="" type="text" />
     <button id="search">검색</button>
-
     <p></p>
+    <!-- //html -->
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -21,20 +23,13 @@
         $('#search').click(function () {
           $.ajax({
             method: 'GET',
-            url: 'https://dapi.kakao.com/v3/search/book?target=title',
-            data: { query: $('#bookName').val() },
+            url: '',
+            data: {},
             headers: {
-              Authorization: 'KakaoAK daa34b73dae635d5b7bc21f9f3306a7d',
+              Authorization: 'KakaoAK API_KEY',
             },
           }).done(function (msg) {
-            console.log(msg.documents[0].title);
-            console.log(msg.documents[0].thumbnail);
-            $('p').append(
-              '<strong>' + msg.documents[0].title + '</strong><br>'
-            );
-            $('p').append(
-              "<img src='" + msg.documents[0].thumbnail + "'/><br>"
-            );
+            // code here
           });
         });
       });
