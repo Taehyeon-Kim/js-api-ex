@@ -8,8 +8,9 @@
   <body>
     <!-- html  -->
     <h1>책 검색 하기</h1>
-    <input id="bookName" value="" type="text" />
-    <button id="search">검색</button>
+    <!-- <input id="bookName" value="" type="text" />
+    <button id="search">검색</button> -->
+    <!-- p 태그에 요소 추가하기 -->
     <p></p>
     <!-- //html -->
 
@@ -20,17 +21,15 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $('#search').click(function () {
-          $.ajax({
-            method: 'GET',
-            url: '',
-            data: {},
-            headers: {
-              Authorization: 'KakaoAK API_KEY',
-            },
-          }).done(function (msg) {
-            // code here
-          });
+        $.ajax({
+          method: '',
+          url: '',
+          data: {},
+          headers: {
+            Authorization: 'KakaoAK API_KEY',
+          },
+        }).done(function (msg) {
+          // code here
         });
       });
     </script>
